@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinGuard — Real-Time Fraud Detection System</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090d;
+      --surface: #0e1017;
+      --panel: #13151e;
+      --border: #1e2235;
+      --accent: #00e5ff;
+      --accent2: #7c3aed;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+      --safe: #10b981;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --mono: 'Space Mono', monospace;
+      --sans: 'Syne', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Grid noise texture ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0, 229, 255, .06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(124, 58, 237, .08) 0%, transparent 60%);
+    }
+
+    /* ════════ HEADER ════════ */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(14, 16, 23, .95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 0 24px rgba(0, 229, 255, .3);
+      font-family: var(--mono);
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--mono);
+      margin-top: 1px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--safe);
+      box-shadow: 0 0 8px var(--safe);
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .4
+      }
+    }
+
+    .status-text {
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--safe);
+    }
+
+    .time-display {
+      font-size: 13px;
+      font-family: var(--mono);
+      color: var(--muted);
+    }
+
+    /* ════════ LAYOUT ════════ */
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Control bar ── */
+    .control-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .ctrl-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ctrl-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+
+    select,
+    input[type=number],
+    input[type=text] {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 13px;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    select:focus,
+    input:focus {
+      border-color: var(--accent);
+    }
+
+    .btn {
+      padding: 8px 18px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      transition: all .18s;
+      letter-spacing: .3px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 0 16px rgba(0, 229, 255, .3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 28px rgba(0, 229, 255, .5);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    .btn-danger:hover {
+      opacity: .85;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .sep {
+      width: 1px;
+      height: 28px;
+      background: var(--border);
+    }
+
+    /* ── Dataset link ── */
+    .dataset-info {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .dataset-info a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(0, 229, 255, .4);
+    }
+
+    .dataset-info a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* ════════ METRICS ROW ════════ */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metric-card {
+      background: var(--surface);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+    }
+
+    .metric-card.safe::after {
+      background: var(--safe);
+    }
+
+    .metric-card.suspect::after {
+      background: var(--warn);
+    }
+
+    .metric-card.highrisk::after {
+      background: #f97316;
+    }
+
+    .metric-card.fraud::after {
+      background: var(--danger);
+    }
+
+    .metric-card.blue::after {
+      background: var(--accent);
+    }
+
+    .metric-card.purple::after {
+      background: var(--accent2);
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 800;
+      font-family: var(--mono);
+      line-height: 1;
+    }
+
+    .metric-card.safe .metric-value {
+      color: var(--safe);
+    }
+
+    .metric-card.suspect .metric-value {
+      color: var(--warn);
+    }
+
+    .metric-card.highrisk .metric-value {
+      color: #f97316;
+    }
+
+    .metric-card.fraud .metric-value {
+      color: var(--danger);
+    }
+
+    .metric-card.blue .metric-value {
+      color: var(--accent);
+    }
+
+    .metric-card.purple .metric-value {
+      color: var(--accent2);
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ════════ BODY GRID ════════ */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      grid-template-rows: auto;
+      gap: 0;
+      min-height: calc(100vh - 200px);
+    }
+
+    .left-col {
+      border-right: 1px solid var(--border);
+    }
+
+    /* ── Transaction feed ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    .badge {
+      font-size: 10px;
+      font-family: var(--mono);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 400;
+    }
+
+    .badge-accent {
+      background: rgba(0, 229, 255, .12);
+      color: var(--accent);
+      border: 1px solid rgba(0, 229, 255, .2);
+    }
+
+    .badge-danger {
+      background: rgba(239, 68, 68, .12);
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, .2);
+    }
+
+    .badge-warn {
+      background: rgba(245, 158, 11, .12);
+      color: var(--warn);
+      border: 1px solid rgba(245, 158, 11, .2);
+    }
+
+    .badge-safe {
+      background: rgba(16, 185, 129, .12);
+      color: var(--safe);
+      border: 1px solid rgba(16, 185, 129, .2);
+    }
+
+    /* ── Transaction table ── */
+    .txn-table-wrap {
+      overflow-y: auto;
+      max-height: 460px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: var(--panel);
+      padding: 10px 16px;
+      font-size: 10px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--muted);
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(30, 34, 53, .7);
+      transition: background .12s;
+      animation: row-in .3s ease;
+    }
+
+    @keyframes row-in {
+      from {
+        opacity: 0;
+        transform: translateX(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    tbody td {
+      padding: 9px 16px;
+      font-size: 12px;
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    .sev-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .sev-SAFE {
+      background: rgba(16, 185, 129, .15);
+      color: var(--safe);
+    }
+
+    .sev-SUSPICIOUS {
+      background: rgba(245, 158, 11, .15);
+      color: var(--warn);
+    }
+
+    .sev-HIGH_RISK {
+      background: rgba(249, 115, 22, .15);
+      color: #f97316;
+    }
+
+    .sev-FRAUD_ALERT {
+      background: rgba(239, 68, 68, .15);
+      color: var(--danger);
+      box-shadow: 0 0 8px rgba(239, 68, 68, .3);
+      animation: blink .8s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .6
+      }
+    }
+
+    .amount-debit {
+      color: var(--danger);
+    }
+
+    .amount-credit {
+      color: var(--safe);
+    }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .progress-bar-outer {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      transition: width .3s ease;
+      box-shadow: 0 0 10px rgba(0, 229, 255, .4);
+    }
+
+    .progress-label {
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── Accounts at risk ── */
+    .account-list {
+      overflow-y: auto;
+      max-height: 280px;
+    }
+
+    .account-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      border-bottom: 1px solid rgba(30, 34, 53, .5);
+      transition: background .12s;
+      animation: row-in .3s ease;
+    }
+
+    .account-item:hover {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .acc-id {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .acc-meta {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: var(--mono);
+      margin-top: 2px;
+    }
+
+    .acc-score-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .score-ring {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      border: 2px solid;
+      position: relative;
+    }
+
+    .score-ring.safe {
+      border-color: var(--safe);
+      color: var(--safe);
+      background: rgba(16, 185, 129, .1);
+    }
+
+    .score-ring.sus {
+      border-color: var(--warn);
+      color: var(--warn);
+      background: rgba(245, 158, 11, .1);
+    }
+
+    .score-ring.high {
+      border-color: #f97316;
+      color: #f97316;
+      background: rgba(249, 115, 22, .1);
+    }
+
+    .score-ring.fraud {
+      border-color: var(--danger);
+      color: var(--danger);
+      background: rgba(239, 68, 68, .1);
+      animation: blink .8s infinite;
+    }
+
+    /* ════════ RIGHT PANEL ════════ */
+    .right-col {
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Alert feed ── */
+    .alert-feed {
+      overflow-y: auto;
+      flex: 1;
+      max-height: 520px;
+    }
+
+    .alert-item {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      animation: alert-in .4s ease;
+      cursor: default;
+    }
+
+    @keyframes alert-in {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .alert-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+    }
+
+    .alert-item.SUSPICIOUS::before {
+      background: var(--warn);
+    }
+
+    .alert-item.HIGH_RISK::before {
+      background: #f97316;
+    }
+
+    .alert-item.FRAUD_ALERT::before {
+      background: var(--danger);
+      box-shadow: 0 0 8px var(--danger);
+    }
+
+    .alert-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .alert-acc {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .alert-time {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .alert-reason {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .alert-metrics {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .alert-chip {
+      font-size: 10px;
+      font-family: var(--mono);
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .alert-chip span {
+      color: var(--text);
+    }
+
+    /* ── Log console ── */
+    .log-console {
+      background: #060709;
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      overflow-y: auto;
+      max-height: 180px;
+      flex-shrink: 0;
+    }
+
+    .log-line {
+      line-height: 1.6;
+    }
+
+    .log-line.info {
+      color: var(--accent);
+    }
+
+    .log-line.warn {
+      color: var(--warn);
+    }
+
+    .log-line.error {
+      color: var(--danger);
+    }
+
+    .log-line.safe {
+      color: var(--safe);
+    }
+
+    .log-line.muted {
+      color: var(--muted);
+    }
+
+    .log-prefix {
+      color: var(--muted);
+      margin-right: 8px;
+    }
+
+    /* ── Chart area ── */
+    .chart-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border-top: 1px solid var(--border);
+    }
+
+    .chart-card {
+      background: var(--surface);
+      padding: 16px 20px;
+    }
+
+    .chart-title {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 12px;
+    }
+
+    canvas {
+      width: 100% !important;
+      max-height: 120px;
+    }
+
+    /* ── Sparkline ── */
+    .sparkline {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 60px;
+    }
+
+    .spark-bar {
+      flex: 1;
+      border-radius: 2px 2px 0 0;
+      min-height: 2px;
+      transition: height .3s ease;
+    }
+
+    .spark-bar.safe {
+      background: var(--safe);
+    }
+
+    .spark-bar.sus {
+      background: var(--warn);
+    }
+
+    .spark-bar.high {
+      background: #f97316;
+    }
+
+    .spark-bar.fraud {
+      background: var(--danger);
+    }
+
+    /* ── Donut chart ── */
+    .donut-wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    .donut-label {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* ── Risk bar chart ── */
+    .risk-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .risk-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .risk-bar-label {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--muted);
+      width: 60px;
+      flex-shrink: 0;
+    }
+
+    .risk-bar-track {
+      flex: 1;
+      height: 8px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .risk-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      transition: width .5s ease;
+    }
+
+    .risk-bar-val {
+      font-size: 11px;
+      font-family: var(--mono);
+      width: 28px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── File upload ── */
+    .upload-zone {
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .upload-zone:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    #fileInput {
+      display: none;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .metrics-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .body-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .right-col {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header {
+        padding: 14px 16px;
+      }
+
+      .control-bar {
+        padding: 12px 16px;
+      }
+    }
+
+    /* ── Toast ── */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all .3s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .5);
+    }
+
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #toast.error {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    #toast.success {
+      border-color: var(--safe);
+      color: var(--safe);
+    }
+
+    .empty-state {
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .empty-state .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      opacity: .4;
+    }
+
+    /* Fraud log modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .7);
+      z-index: 200;
+      display: none;
+      place-items: center;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .7);
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      padding: 20px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════ HEADER ════════ -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">FG</div>
+      <div>
+        <div class="logo-text">Fin<span>Guard</span></div>
+        <div class="logo-sub">REAL-TIME FRAUD DETECTION ENGINE v2.1</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="status-dot" id="statusDot"></div>
+      <div class="status-text" id="statusText">IDLE</div>
+      <div class="sep"></div>
+      <div class="time-display" id="clockDisplay">--:--:--</div>
+    </div>
+  </header>
+
+  <!-- ════════ CONTROL BAR ════════ -->
+  <div class="control-bar">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Mode</span>
+      <select id="modeSelect">
+        <option value="simulate">Simulate</option>
+        <option value="file">Load CSV</option>
+      </select>
+    </div>
+
+    <div class="ctrl-group" id="simControls">
+      <span class="ctrl-label">Transactions</span>
+      <input type="number" id="countInput" value="2000" min="100" max="5000" style="width:90px">
+      <span class="ctrl-label">Speed</span>
+      <select id="speedSelect">
+        <option value="0">Max Speed</option>
+        <option value="5" selected>Fast (5ms)</option>
+        <option value="20">Normal (20ms)</option>
+        <option value="100">Slow (100ms)</option>
+      </select>
+    </div>
+
+    <div class="ctrl-group" id="fileControls" style="display:none">
+      <label class="btn btn-ghost" style="cursor:pointer" for="fileInput">📂 Choose CSV</label>
+      <input type="file" id="fileInput" accept=".csv,.txt">
+      <span id="fileLabel" style="font-size:12px;color:var(--muted);font-family:var(--mono)">No file selected</span>
+    </div>
+
+    <div class="sep"></div>
+    <button class="btn btn-primary" id="startBtn">▶ Start Engine</button>
+    <button class="btn btn-danger" id="stopBtn" disabled>⏹ Stop</button>
+    <button class="btn btn-ghost" id="resetBtn">↺ Reset</button>
+    <button class="btn btn-ghost" id="exportBtn">⬇ Export Log</button>
+    <button class="btn btn-ghost" id="viewLogBtn">📋 Fraud Log</button>
+
+    <div class="dataset-info">
+      📊 Sample Dataset:
+      <a href="https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset" target="_blank">Kaggle
+        — Online Payments Fraud</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Credit Card Fraud Dataset</a>
+    </div>
+  </div>
+
+  <!-- ════════ METRICS ROW ════════ -->
+  <div class="metrics-row">
+    <div class="metric-card blue">
+      <div class="metric-label">Processed</div>
+      <div class="metric-value" id="m-processed">0</div>
+      <div class="metric-sub">transactions</div>
+    </div>
+    <div class="metric-card purple">
+      <div class="metric-label">Accounts</div>
+      <div class="metric-value" id="m-accounts">0</div>
+      <div class="metric-sub">unique monitored</div>
+    </div>
+    <div class="metric-card safe">
+      <div class="metric-label">Safe</div>
+      <div class="metric-value" id="m-safe">0</div>
+      <div class="metric-sub">score 0–15</div>
+    </div>
+    <div class="metric-card suspect">
+      <div class="metric-label">Suspicious</div>
+      <div class="metric-value" id="m-suspicious">0</div>
+      <div class="metric-sub">score 16–30</div>
+    </div>
+    <div class="metric-card highrisk">
+      <div class="metric-label">High Risk</div>
+      <div class="metric-value" id="m-highrisk">0</div>
+      <div class="metric-sub">score 31–50</div>
+    </div>
+    <div class="metric-card fraud">
+      <div class="metric-label">Fraud Alert</div>
+      <div class="metric-value" id="m-fraud">0</div>
+      <div class="metric-sub">score 51+</div>
+    </div>
+  </div>
+
+  <!-- ════════ PROGRESS ════════ -->
+  <div class="progress-wrap">
+    <div class="progress-label" id="progressLabel">Ready</div>
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
+    </div>
+    <div class="progress-label" id="progressPct">0%</div>
+    <div class="progress-label" style="color:var(--accent)" id="throughputLabel">-- tx/s</div>
+  </div>
+
+  <!-- ════════ BODY GRID ════════ -->
+  <div class="body-grid">
+
+    <!-- LEFT COL -->
+    <div class="left-col">
+      <!-- Transaction Feed -->
+      <div class="section-header">
+        <div class="section-title">
+          <div class="dot"></div>
+          Live Transaction Feed
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="badge badge-accent" id="feedCount">0 shown</span>
+          <select id="filterSev" style="font-size:11px;padding:4px 8px">
+            <option value="ALL">All</option>
+            <option value="SUSPICIOUS">Suspicious+</option>
+            <option value="HIGH_RISK">High Risk+</option>
+            <option value="FRAUD_ALERT">Fraud Only</option>
+          </select>
+        </div>
+      </div>
+      <div class="txn-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>TxnID</th>
+              <th>Account</th>
+              <th>Type</th>
+              <th>Amount (₹)</th>
+              <th>Location</th>
+              <th>Device</th>
+              <th>Severity</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="txnTableBody">
+            <tr>
+              <td colspan="9">
+                <div class="empty-state">
+                  <div class="icon">⚡</div>Waiting for transactions…
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Accounts at Risk -->
+      <div class="section-header" style="margin-top:1px">
+        <div class="section-title">
+          <div class="dot" style="background:var(--danger)"></div>
+          Accounts at Risk
+        </div>
+        <span class="badge badge-danger" id="riskAccCount">0 flagged</span>
+      </div>
+      <div class="account-list" id="accountList">
+        <div class="empty-state">
+          <div class="icon">🛡️</div>No high-risk accounts
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="chart-row">
+        <div class="chart-card">
+          <div class="chart-title">Alert Volume (rolling)</div>
+          <div class="sparkline" id="sparkline"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Risk Distribution</div>
+          <div class="risk-bars" id="riskBars">
+            <div class="risk-bar-row">
+              <div class="risk-bar-label" style="color:var(--safe)">Safe</div>
+              <div class="risk-bar-track">
+                <div class="risk-bar-fill" style="width:0%;background:var(--safe)" id="rb-safe"></div>
+              </div>
+              <div class="risk-bar-val" id="rv-safe">0</div>
+            </div>
+            <div class="risk-bar-row">
+              <div class="risk-bar-label" style="color:var(--warn)">Suspect</div>
+              <div class="risk-bar-track">
+                <div class="risk-bar-fill" style="width:0%;background:var(--warn)" id="rb-sus"></div>
+              </div>
+              <div class="risk-bar-val" id="rv-sus">0</div>
+            </div>
+            <div class="risk-bar-row">
+              <div class="risk-bar-label" style="color:#f97316">High Risk</div>
+              <div class="risk-bar-track">
+                <div class="risk-bar-fill" style="width:0%;background:#f97316" id="rb-high"></div>
+              </div>
+              <div class="risk-bar-val" id="rv-high">0</div>
+            </div>
+            <div class="risk-bar-row">
+              <div class="risk-bar-label" style="color:var(--danger)">Fraud</div>
+              <div class="risk-bar-track">
+                <div class="risk-bar-fill" style="width:0%;background:var(--danger)" id="rb-fraud"></div>
+              </div>
+              <div class="risk-bar-val" id="rv-fraud">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COL -->
+    <div class="right-col">
+      <div class="section-header">
+        <div class="section-title">
+          <div class="dot" style="background:var(--danger)"></div>
+          Alert Stream
+        </div>
+        <span class="badge badge-danger" id="alertStreamCount">0 alerts</span>
+      </div>
+      <div class="alert-feed" id="alertFeed">
+        <div class="empty-state">
+          <div class="icon">🔔</div>No alerts yet
+        </div>
+      </div>
+
+      <!-- System Log -->
+      <div class="section-header">
+        <div class="section-title">
+          <div class="dot" style="background:var(--muted)"></div>
+          System Console
+        </div>
+      </div>
+      <div class="log-console" id="logConsole">
+        <div class="log-line muted"><span class="log-prefix">[SYS]</span>FinGuard engine initialized. Awaiting start
+          command.</div>
+        <div class="log-line muted"><span class="log-prefix">[SYS]</span>Thread-1 (Ingestion) · Thread-2 (Analyzer) ·
+          Thread-3 (Dispatcher) — STANDBY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ FRAUD LOG MODAL ════════ -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">📋 fraud_alert.txt — Fraud Log</div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody">No fraud alerts recorded yet.</div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <!-- ════════ JAVASCRIPT ENGINE ════════ -->
+  <script>
+    // ═══════════════════════════════════════════════════════════════════
+    // FinGuard — JavaScript simulation of Java backend logic
+    // Mirrors: AccountWindow, RiskScorer, FraudDetectionEngine,
+    //          TransactionIngestion, AlertDispatcher
+    // ═══════════════════════════════════════════════════════════════════
+
+    // ── Constants (match Java) ──
+    const WINDOW_SEC = 600;
+    const CITY_WIN_SEC = 300;
+    const HIGH_VAL_THRESH = 50000;
+    const TOTAL_SPEND_LIM = 200000;
+
+    const ACCOUNTS = ['ACC101', 'ACC202', 'ACC303', 'ACC404', 'ACC505', 'ACC606', 'ACC707', 'ACC808', 'ACC909', 'ACC010'];
+    const CITIES = ['Mumbai', 'Delhi', 'Bengaluru', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune', 'Ahmedabad', 'Jaipur', 'Surat'];
+    const DEVICES = ['DEV_A1', 'DEV_B2', 'DEV_C3', 'DEV_D4', 'DEV_E5', 'DEV_F6', 'DEV_G7', 'DEV_H8', 'DEV_I9', 'DEV_J0'];
+    const SEVERITY = { SAFE: 'SAFE', SUS: 'SUSPICIOUS', HIGH: 'HIGH_RISK', FRAUD: 'FRAUD_ALERT' };
+
+    // ── State ──
+    let accountWindows = {};   // accountId → { queue:[], highVal:0, totalSpend:0, devices:Set, cities:Set }
+    let metrics = { processed: 0, safe: 0, sus: 0, high: 0, fraud: 0 };
+    let allAlerts = [];
+    let fraudLog = [];
+    let txnFeedRows = [];    // last N transactions
+    let sparkData = new Array(30).fill(0);
+    let running = false;
+    let simTimer = null;
+    let simQueue = [];
+    let simIdx = 0;
+    let startTime = null;
+    let totalToProcess = 0;
+
+    // ── AccountWindow (mirrors Java AccountWindow) ──
+    function getOrCreateWindow(accountId) {
+      if (!accountWindows[accountId]) {
+        accountWindows[accountId] = {
+          queue: [],           // sorted by timestamp ascending
+          highVal: 0,
+          totalSpend: 0.0,
+          devices: new Set(),
+          cities: new Set()
+        };
+      }
+      return accountWindows[accountId];
+    }
+
+    function addAndEvict(win, t) {
+      const cutoff = t.ts - WINDOW_SEC;
+      // Evict expired
+      while (win.queue.length && win.queue[0].ts <= cutoff) {
+        const exp = win.queue.shift();
+        if (exp.amount > HIGH_VAL_THRESH) win.highVal--;
+        win.totalSpend -= exp.amount;
+      }
+      // Add new
+      win.queue.push(t);
+      if (t.amount > HIGH_VAL_THRESH) win.highVal++;
+      win.totalSpend += t.amount;
+      // Rebuild sets
+      win.devices = new Set(win.queue.map(x => x.deviceId));
+      win.cities = new Set(win.queue.map(x => x.location));
+    }
+
+    function getCityChanges5Min(win) {
+      if (!win.queue.length) return 0;
+      const latest = win.queue[win.queue.length - 1].ts;
+      const cutoff = latest - CITY_WIN_SEC;
+      const cities5 = new Set();
+      for (const tx of win.queue) {
+        if (tx.ts > cutoff) cities5.add(tx.location);
+      }
+      return cities5.size;
+    }
+
+    // ── RiskScorer (mirrors Java RiskScorer) ──
+    function scoreToSeverity(score) {
+      if (score <= 15) return SEVERITY.SAFE;
+      if (score <= 30) return SEVERITY.SUS;
+      if (score <= 50) return SEVERITY.HIGH;
+      return SEVERITY.FRAUD;
+    }
+
+    function evaluate(win, accountId) {
+      const hv = win.highVal;
+      const city5 = getCityChanges5Min(win);
+      const devSw = win.devices.size;
+      const spend = win.totalSpend;
+      const spendFac = Math.floor(spend / HIGH_VAL_THRESH) * 3;
+
+      const score = (hv * 5) + (city5 * 7) + (devSw * 4) + spendFac;
+      const sev = scoreToSeverity(score);
+
+      const reasons = [];
+      if (hv > 3) reasons.push(`${hv} high-value txns (>₹50k)`);
+      if (city5 >= 2) reasons.push(`${city5} cities in 5 min`);
+      if (devSw > 5) reasons.push(`${devSw} different devices`);
+      if (spend > TOTAL_SPEND_LIM) reasons.push(`Total spend ₹${fmtNum(spend)} exceeds ₹2,00,000`);
+
+      return {
+        accountId, score, severity: sev,
+        reason: reasons.length ? reasons.join('; ') : 'Normal activity',
+        highVal: hv, cityChanges: city5, deviceSwitches: devSw, totalSpend: spend,
+        time: new Date()
+      };
+    }
+
+    // ── Simulation (mirrors Java TransactionIngestion.simulate) ──
+    function buildSimQueue(count, baseEpoch) {
+      const txns = [];
+      let ts = baseEpoch;
+      const rng = seededRng(42);
+
+      for (let i = 0; i < count; i++) {
+        ts += Math.floor(rng() * 60) + 1;
+        let acc = ACCOUNTS[Math.floor(rng() * ACCOUNTS.length)];
+        let city = CITIES[Math.floor(rng() * CITIES.length)];
+        let dev = DEVICES[Math.floor(rng() * DEVICES.length)];
+        let amt = 1000 + rng() * 99000;
+        let type = rng() > .5 ? 'DEBIT' : 'CREDIT';
+
+        if (i % 50 === 0) {
+          acc = 'ACC_FRAUD';
+          amt = 60000 + rng() * 90000;
+          type = 'DEBIT';
+          city = CITIES[i % CITIES.length];
+        }
+        txns.push({ ts, id: `TXN${String(i + 1).padStart(6, '0')}`, accountId: acc, type, amount: amt, location: city, deviceId: dev });
+      }
+      return txns;
+    }
+
+    // Seeded LCG random (deterministic, reproducible)
+    function seededRng(seed) {
+      let s = seed;
+      return () => { s = (s * 1664525 + 1013904223) & 0xffffffff; return (s >>> 0) / 0xffffffff; };
+    }
+
+    // ── CSV Parser (mirrors Java Transaction.parse) ──
+    function parseCSVLine(line) {
+      line = line.trim();
+      if (!line || line.startsWith('#') || line.toLowerCase().startsWith('timestamp')) return null;
+      const p = line.split(',');
+      if (p.length < 7) return null;
+      const ts = parseInt(p[0]);
+      const id = p[1].trim();
+      const acc = p[2].trim();
+      const typ = p[3].trim().toUpperCase();
+      const amt = parseFloat(p[4]);
+      const loc = p[5].trim();
+      const dev = p[6].trim();
+      if (isNaN(ts) || isNaN(amt)) return null;
+      return { ts, id, accountId: acc, type: typ, amount: amt, location: loc, deviceId: dev };
+    }
+
+    // ── Process a single transaction ──
+    function processTransaction(t) {
+      const win = getOrCreateWindow(t.accountId);
+      addAndEvict(win, t);
+      metrics.processed++;
+
+      let alert = null;
+      if (t.type === 'DEBIT') {
+        alert = evaluate(win, t.accountId);
+        if (alert.severity !== SEVERITY.SAFE) {
+          dispatchAlert(alert, t);
+        }
+        // Count for distribution (based on current window score)
+        const sev = alert.severity;
+        if (sev === SEVERITY.SUS) metrics.sus++;
+        else if (sev === SEVERITY.HIGH) metrics.high++;
+        else if (sev === SEVERITY.FRAUD) metrics.fraud++;
+        else metrics.safe++;
+      } else {
+        metrics.safe++;
+      }
+
+      addToFeed(t, alert);
+      return alert;
+    }
+
+    // ── Alert Dispatcher (Thread-3 behaviour) ──
+    function dispatchAlert(alert, t) {
+      allAlerts.unshift(alert);
+      if (allAlerts.length > 200) allAlerts.pop();
+
+      if (alert.severity === SEVERITY.FRAUD) {
+        fraudLog.push(alert);
+        sparkData.push(2);
+        log(`[FRAUD] ${alert.accountId} — Score:${alert.score} — ${alert.reason}`, 'error');
+      } else if (alert.severity === SEVERITY.HIGH) {
+        sparkData.push(1);
+        log(`[HIGH_RISK] ${alert.accountId} — Score:${alert.score}`, 'warn');
+      } else {
+        sparkData.push(0.5);
+      }
+      if (sparkData.length > 30) sparkData.shift();
+
+      renderAlertFeed();
+      renderSparkline();
+    }
+
+    // ── Feed ──
+    function addToFeed(t, alert) {
+      txnFeedRows.unshift({ t, alert });
+      if (txnFeedRows.length > 500) txnFeedRows.pop();
+    }
+
+    // ═════════════════════════ RENDER ═══════════════════════════
+
+    function renderAll() {
+      renderMetrics();
+      renderProgress();
+      renderFeed();
+      renderAccountList();
+      renderRiskBars();
+    }
+
+    function renderMetrics() {
+      const accounts = Object.keys(accountWindows).length;
+      el('m-processed').textContent = fmtNum(metrics.processed);
+      el('m-accounts').textContent = fmtNum(accounts);
+      el('m-safe').textContent = fmtNum(metrics.safe);
+      el('m-suspicious').textContent = fmtNum(metrics.sus);
+      el('m-highrisk').textContent = fmtNum(metrics.high);
+      el('m-fraud').textContent = fmtNum(metrics.fraud);
+    }
+
+    function renderProgress() {
+      const pct = totalToProcess ? Math.min(100, Math.round(metrics.processed / totalToProcess * 100)) : 0;
+      el('progressBar').style.width = pct + '%';
+      el('progressPct').textContent = pct + '%';
+      el('progressLabel').textContent = running
+        ? `Processing… ${fmtNum(metrics.processed)} / ${fmtNum(totalToProcess)}`
+        : (metrics.processed > 0 ? 'Complete' : 'Ready');
+
+      if (startTime && metrics.processed > 0) {
+        const elapsed = (Date.now() - startTime) / 1000;
+        const tps = Math.round(metrics.processed / elapsed);
+        el('throughputLabel').textContent = fmtNum(tps) + ' tx/s';
+      }
+    }
+
+    function renderFeed() {
+      const filterVal = el('filterSev').value;
+      const filterMap = {
+        ALL: null, SUSPICIOUS: [SEVERITY.SUS, SEVERITY.HIGH, SEVERITY.FRAUD],
+        HIGH_RISK: [SEVERITY.HIGH, SEVERITY.FRAUD], FRAUD_ALERT: [SEVERITY.FRAUD]
+      };
+      const allowedSev = filterMap[filterVal];
+
+      const rows = txnFeedRows.filter(r => {
+        if (!allowedSev) return true;
+        return r.alert && allowedSev.includes(r.alert.severity);
+      }).slice(0, 80);
+
+      if (!rows.length) {
+        el('txnTableBody').innerHTML = `<tr><td colspan="9"><div class="empty-state"><div class="icon">⚡</div>No matching transactions</div></td></tr>`;
+        el('feedCount').textContent = '0 shown';
+        return;
+      }
+
+      el('feedCount').textContent = rows.length + ' shown';
+      el('txnTableBody').innerHTML = rows.map(({ t, alert }) => {
+        const sev = alert ? alert.severity : SEVERITY.SAFE;
+        const score = alert ? alert.score : '–';
+        const time = epochToTime(t.ts);
+        const amtClass = t.type === 'DEBIT' ? 'amount-debit' : 'amount-credit';
+        const amtSign = t.type === 'DEBIT' ? '-' : '+';
+        return `<tr>
+      <td>${time}</td>
+      <td style="color:var(--muted)">${t.id}</td>
+      <td style="font-weight:700">${t.accountId}</td>
+      <td style="color:${t.type === 'DEBIT' ? 'var(--danger)' : 'var(--safe)'}">${t.type}</td>
+      <td class="${amtClass}">${amtSign}${fmtRupee(t.amount)}</td>
+      <td>${t.location}</td>
+      <td style="color:var(--muted)">${t.deviceId}</td>
+      <td><span class="sev-pill sev-${sev}">${sev.replace('_', ' ')}</span></td>
+      <td style="font-weight:700;color:${scoreColor(typeof score === 'number' ? score : 0)}">${score}</td>
+    </tr>`;
+      }).join('');
+    }
+
+    function renderAlertFeed() {
+      const shown = allAlerts.slice(0, 50);
+      el('alertStreamCount').textContent = allAlerts.length + ' alerts';
+
+      if (!shown.length) {
+        el('alertFeed').innerHTML = `<div class="empty-state"><div class="icon">🔔</div>No alerts yet</div>`;
+        return;
+      }
+
+      el('alertFeed').innerHTML = shown.map(a => `
+    <div class="alert-item ${a.severity}">
+      <div class="alert-header">
+        <div class="alert-acc">${a.accountId}</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="sev-pill sev-${a.severity}">${a.severity.replace('_', ' ')}</span>
+          <span class="alert-time">${timeAgo(a.time)}</span>
+        </div>
+      </div>
+      <div class="alert-reason">${a.reason}</div>
+      <div class="alert-metrics">
+        <div class="alert-chip">Score: <span>${a.score}</span></div>
+        <div class="alert-chip">HighVal: <span>${a.highVal}</span></div>
+        <div class="alert-chip">Cities: <span>${a.cityChanges}</span></div>
+        <div class="alert-chip">Devices: <span>${a.deviceSwitches}</span></div>
+        <div class="alert-chip">Spend: <span>₹${fmtRupee(a.totalSpend)}</span></div>
+      </div>
+    </div>`).join('');
+    }
+
+    function renderAccountList() {
+      const riskAccs = Object.entries(accountWindows)
+        .map(([id, win]) => {
+          const sc = (win.highVal * 5) + (getCityChanges5Min(win) * 7) + (win.devices.size * 4) + Math.floor(win.totalSpend / 50000) * 3;
+          return { id, score: sc, win };
+        })
+        .filter(x => x.score > 15)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 20);
+
+      el('riskAccCount').textContent = riskAccs.length + ' flagged';
+
+      if (!riskAccs.length) {
+        el('accountList').innerHTML = `<div class="empty-state"><div class="icon">🛡️</div>No high-risk accounts</div>`;
+        return;
+      }
+
+      el('accountList').innerHTML = riskAccs.map(({ id, score, win }) => {
+        const sev = scoreToSeverity(score);
+        const cls = { SAFE: 'safe', SUSPICIOUS: 'sus', HIGH_RISK: 'high', FRAUD_ALERT: 'fraud' }[sev];
+        return `<div class="account-item">
+      <div>
+        <div class="acc-id">${id}</div>
+        <div class="acc-meta">Win: ${win.queue.length} txns | Spend: ₹${fmtRupee(win.totalSpend)} | Devices: ${win.devices.size}</div>
+      </div>
+      <div class="acc-score-wrap">
+        <span class="sev-pill sev-${sev}" style="font-size:9px">${sev.replace('_', ' ')}</span>
+        <div class="score-ring ${cls}">${score}</div>
+      </div>
+    </div>`;
+      }).join('');
+    }
+
+    function renderSparkline() {
+      const max = Math.max(...sparkData, 1);
+      el('sparkline').innerHTML = sparkData.map(v => {
+        const h = Math.max(2, Math.round((v / max) * 60));
+        const cls = v >= 2 ? 'fraud' : v >= 1 ? 'high' : v > 0 ? 'sus' : 'safe';
+        return `<div class="spark-bar ${cls}" style="height:${h}px"></div>`;
+      }).join('');
+    }
+
+    function renderRiskBars() {
+      const total = metrics.safe + metrics.sus + metrics.high + metrics.fraud || 1;
+      const set = (id, vid, val, total) => {
+        const pct = Math.round(val / total * 100);
+        const bar = document.getElementById(id);
+        const lbl = document.getElementById(vid);
+        if (bar) bar.style.width = pct + '%';
+        if (lbl) lbl.textContent = fmtNum(val);
+      };
+      set('rb-safe', 'rv-safe', metrics.safe, total);
+      set('rb-sus', 'rv-sus', metrics.sus, total);
+      set('rb-high', 'rv-high', metrics.high, total);
+      set('rb-fraud', 'rv-fraud', metrics.fraud, total);
+    }
+
+    // ════════ ENGINE CONTROL ════════
+
+    function startEngine() {
+      const mode = el('modeSelect').value;
+      const speed = parseInt(el('speedSelect').value);
+      running = true; simIdx = 0;
+      startTime = Date.now();
+
+      el('startBtn').disabled = true;
+      el('stopBtn').disabled = false;
+      el('statusDot').style.background = 'var(--accent)';
+      el('statusDot').style.boxShadow = '0 0 8px var(--accent)';
+      el('statusText').textContent = 'RUNNING';
+      el('statusText').style.color = 'var(--accent)';
+
+      log('[T1] Transaction Ingestion thread started', 'info');
+      log('[T2] Fraud Analyzer thread started', 'info');
+      log('[T3] Alert Dispatcher thread started', 'info');
+
+      if (mode === 'simulate') {
+        const count = Math.min(5000, Math.max(100, parseInt(el('countInput').value) || 2000));
+        totalToProcess = count;
+        const baseEpoch = Math.floor(Date.now() / 1000) - 3600;
+        simQueue = buildSimQueue(count, baseEpoch);
+        log(`[T1] Simulation: ${count} transactions queued`, 'info');
+        runSimulation(speed);
+      } else {
+        // File mode — already loaded into simQueue by file handler
+        if (!simQueue.length) { showToast('No CSV loaded. Please choose a file.', 'error'); stopEngine(); return; }
+        totalToProcess = simQueue.length;
+        log(`[T1] File mode: ${simQueue.length} transactions loaded`, 'info');
+        runSimulation(speed);
+      }
+    }
+
+    function runSimulation(speed) {
+      const batchSize = speed === 0 ? 200 : speed <= 5 ? 50 : speed <= 20 ? 10 : 1;
+      const interval = speed === 0 ? 16 : speed;
+
+      simTimer = setInterval(() => {
+        if (!running || simIdx >= simQueue.length) {
+          clearInterval(simTimer);
+          if (simIdx >= simQueue.length) {
+            onComplete();
+          }
+          return;
+        }
+        const end = Math.min(simIdx + batchSize, simQueue.length);
+        for (let i = simIdx; i < end; i++) {
+          processTransaction(simQueue[i]);
+        }
+        simIdx = end;
+        renderAll();
+      }, interval);
+    }
+
+    function stopEngine() {
+      running = false;
+      clearInterval(simTimer);
+      el('startBtn').disabled = false;
+      el('stopBtn').disabled = true;
+      el('statusDot').style.background = '#f59e0b';
+      el('statusDot').style.boxShadow = '0 0 8px #f59e0b';
+      el('statusText').textContent = 'STOPPED';
+      el('statusText').style.color = '#f59e0b';
+      log('[SYS] Engine stopped by user', 'warn');
+      renderAll();
+    }
+
+    function onComplete() {
+      running = false;
+      el('startBtn').disabled = false;
+      el('stopBtn').disabled = true;
+      el('statusDot').style.background = 'var(--safe)';
+      el('statusDot').style.boxShadow = '0 0 8px var(--safe)';
+      el('statusText').textContent = 'COMPLETE';
+      el('statusText').style.color = 'var(--safe)';
+      log(`[SYS] Processing complete: ${metrics.processed} transactions | ${allAlerts.length} alerts | ${metrics.fraud} fraud`, 'safe');
+      showToast(`Done! ${fmtNum(metrics.processed)} processed, ${metrics.fraud} fraud alerts`, 'success');
+      renderAll();
+    }
+
+    function resetEngine() {
+      stopEngine();
+      accountWindows = {}; metrics = { processed: 0, safe: 0, sus: 0, high: 0, fraud: 0 };
+      allAlerts = []; fraudLog = []; txnFeedRows = []; simQueue = []; simIdx = 0;
+      sparkData = new Array(30).fill(0); totalToProcess = 0; startTime = null;
+      el('statusDot').style.background = 'var(--safe)';
+      el('statusDot').style.boxShadow = '0 0 8px var(--safe)';
+      el('statusText').textContent = 'IDLE';
+      el('statusText').style.color = 'var(--safe)';
+      el('logConsole').innerHTML = `
+    <div class="log-line muted"><span class="log-prefix">[SYS]</span>Engine reset. All data cleared.</div>
+    <div class="log-line muted"><span class="log-prefix">[SYS]</span>Thread-1 · Thread-2 · Thread-3 — STANDBY</div>`;
+      el('alertFeed').innerHTML = `<div class="empty-state"><div class="icon">🔔</div>No alerts yet</div>`;
+      el('accountList').innerHTML = `<div class="empty-state"><div class="icon">🛡️</div>No high-risk accounts</div>`;
+      renderAll();
+    }
+
+    // ════════ FILE HANDLING ════════
+    el('modeSelect').addEventListener('change', () => {
+      const isFile = el('modeSelect').value === 'file';
+      el('simControls').style.display = isFile ? 'none' : 'flex';
+      el('fileControls').style.display = isFile ? 'flex' : 'none';
+    });
+
+    el('fileInput').addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      el('fileLabel').textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        const lines = ev.target.result.split('\n');
+        simQueue = [];
+        for (const line of lines) {
+          const t = parseCSVLine(line);
+          if (t) simQueue.push(t);
+        }
+        showToast(`Loaded ${simQueue.length} transactions from ${file.name}`, 'success');
+        log(`[T1] CSV loaded: ${simQueue.length} transactions from "${file.name}"`, 'info');
+      };
+      reader.readAsText(file);
+    });
+
+    // ════════ EXPORT ════════
+    el('exportBtn').addEventListener('click', () => {
+      if (!allAlerts.length) { showToast('No alerts to export', 'error'); return; }
+      const lines = ['FinGuard Fraud Alert Log', '='.repeat(50), ''];
+      for (const a of fraudLog) {
+        lines.push(`Account:  ${a.accountId}`);
+        lines.push(`Score:    ${a.score}`);
+        lines.push(`Severity: ${a.severity}`);
+        lines.push(`Reason:   ${a.reason}`);
+        lines.push(`HighVal:  ${a.highVal} | Cities: ${a.cityChanges} | Devices: ${a.deviceSwitches}`);
+        lines.push(`Spend:    ₹${fmtRupee(a.totalSpend)}`);
+        lines.push(`Time:     ${a.time.toISOString()}`);
+        lines.push('-'.repeat(40));
+      }
+      const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'fraud_alert.txt'; a.click();
+      URL.revokeObjectURL(url);
+      showToast(`Exported ${fraudLog.length} fraud alerts`, 'success');
+    });
+
+    el('viewLogBtn').addEventListener('click', () => {
+      const body = el('modalBody');
+      if (!fraudLog.length) {
+        body.textContent = 'No FRAUD_ALERT level entries recorded yet.';
+      } else {
+        body.innerHTML = fraudLog.map(a => `
+      <div style="margin-bottom:16px;padding:12px;background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);border-radius:6px">
+        <div style="color:var(--danger);font-weight:700;margin-bottom:6px">[FRAUD ALERT] ${a.time.toLocaleString()}</div>
+        <div>Account  : <span style="color:var(--text)">${a.accountId}</span></div>
+        <div>Score    : <span style="color:var(--danger)">${a.score}</span></div>
+        <div>Severity : FRAUD_ALERT</div>
+        <div>Reason   : ${a.reason}</div>
+        <div>Details  : HighVal=${a.highVal} | CityChg=${a.cityChanges} | DevSwitch=${a.deviceSwitches} | Spend=₹${fmtRupee(a.totalSpend)}</div>
+      </div>`).join('');
+      }
+      el('modalBackdrop').classList.add('open');
+    });
+
+    el('modalClose').addEventListener('click', () => el('modalBackdrop').classList.remove('open'));
+    el('modalBackdrop').addEventListener('click', e => { if (e.target === el('modalBackdrop')) el('modalBackdrop').classList.remove('open'); });
+
+    // ════════ EVENTS ════════
+    el('startBtn').addEventListener('click', startEngine);
+    el('stopBtn').addEventListener('click', stopEngine);
+    el('resetBtn').addEventListener('click', resetEngine);
+    el('filterSev').addEventListener('change', renderFeed);
+
+    // ════════ CLOCK ════════
+    setInterval(() => {
+      el('clockDisplay').textContent = new Date().toLocaleTimeString();
+    }, 1000);
+
+    // ════════ UTILITIES ════════
+    function el(id) { return document.getElementById(id); }
+    function fmtNum(n) { return n.toLocaleString('en-IN'); }
+    function fmtRupee(n) { return n.toLocaleString('en-IN', { maximumFractionDigits: 0 }); }
+    function epochToTime(ts) {
+      const d = new Date(ts * 1000);
+      return d.toLocaleTimeString('en-IN', { hour12: false });
+    }
+    function timeAgo(date) {
+      const s = Math.round((Date.now() - date) / 1000);
+      if (s < 60) return s + 's ago';
+      if (s < 3600) return Math.floor(s / 60) + 'm ago';
+      return Math.floor(s / 3600) + 'h ago';
+    }
+    function scoreColor(score) {
+      if (score <= 15) return 'var(--safe)';
+      if (score <= 30) return 'var(--warn)';
+      if (score <= 50) return '#f97316';
+      return 'var(--danger)';
+    }
+
+    let logCount = 0;
+    function log(msg, type = 'muted') {
+      logCount++;
+      const div = document.createElement('div');
+      div.className = `log-line ${type}`;
+      div.innerHTML = `<span class="log-prefix">${new Date().toLocaleTimeString()}</span>${msg}`;
+      const console_ = el('logConsole');
+      console_.appendChild(div);
+      if (logCount > 100) console_.firstChild.remove();
+      console_.scrollTop = console_.scrollHeight;
+    }
+
+    function showToast(msg, type = '') {
+      const t = el('toast');
+      t.textContent = msg;
+      t.className = `show ${type}`;
+      setTimeout(() => t.className = '', 3000);
+    }
+
+    // Init sparkline
+    renderSparkline();
+  </script>
+</body>
+
+</html>

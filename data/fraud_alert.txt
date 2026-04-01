@@ -1,0 +1,1065 @@
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹205061 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=205060.92
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹219547 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=219547.19
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC707 | Score: 51 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=1 | CityChanges=4 | DeviceSwitches=3 | TotalSpend=145168.10
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC707 | Score: 71 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹282879 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=282879.21
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC202 | Score: 78 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹290601 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=290601.36
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=163545.68
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹205375 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=205375.33
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹200225 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=200224.53
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 72 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); Total spend ₹401684 exceeds ₹2,00,000
+HighValue=5 | CityChanges=1 | DeviceSwitches=4 | TotalSpend=401683.90
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹231628 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=231628.39
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC303 | Score: 54 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=199858.79
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC303 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹220208 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=220207.58
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC303 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹313463 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=313462.75
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC606 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹205931 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=205931.33
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹273110 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=273109.59
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC909 | Score: 71 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹342180 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=342180.18
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC707 | Score: 62 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹200759 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=3 | TotalSpend=200758.54
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 61 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹282445 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=282445.02
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC101 | Score: 80 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹329787 exceeds ₹2,00,000
+HighValue=5 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=329786.89
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC909 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=199572.09
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC303 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹200331 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=200330.98
+
+=== 2026-03-07 12:58:00 ===
+Account: ACC010 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; 6 different devices
+HighValue=1 | CityChanges=3 | DeviceSwitches=6 | TotalSpend=174888.39
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; 6 different devices; Total spend ₹268186 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=6 | TotalSpend=268186.27
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹239075 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=239074.77
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC303 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹201296 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=201295.64
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹335141 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=335141.02
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC505 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹259551 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=259550.91
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹218556 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=2 | TotalSpend=218556.18
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC909 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹201017 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=201016.59
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 75 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹344655 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=344655.16
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC909 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹273079 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=273078.58
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=174468.80
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 79 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹345459 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=345459.43
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC303 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹219347 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=219347.03
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹236124 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=236124.33
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹238402 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=5 | TotalSpend=238402.49
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 67 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹291366 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=291366.33
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹313273 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=313273.13
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 76 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹363919 exceeds ₹2,00,000
+HighValue=5 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=363919.27
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹236686 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=236685.87
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹230973 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=230972.57
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹255312 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=255311.92
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 89 | Severity: FRAUD_ALERT
+Reason: 5 cities within 5 minutes; 6 different devices; Total spend ₹298217 exceeds ₹2,00,000
+HighValue=3 | CityChanges=5 | DeviceSwitches=6 | TotalSpend=298217.24
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=175463.95
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹213555 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=213554.63
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹230131 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=230130.68
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹216334 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=216333.66
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹205218 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=205218.25
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹238333 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=238332.69
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC303 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹245690 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=245689.59
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹240748 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=240747.81
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 72 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹298156 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=298155.61
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC303 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹227812 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=227811.65
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹200925 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=200925.35
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹226427 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=226427.07
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹230142 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=230141.92
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC909 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹244494 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=244494.33
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC909 | Score: 71 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹255130 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=255129.91
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC808 | Score: 70 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹218754 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=218754.12
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC505 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹268674 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=5 | TotalSpend=268674.09
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=190261.16
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹260193 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=260192.69
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 78 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹356799 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=356798.87
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹259922 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=259922.06
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=2 | CityChanges=4 | DeviceSwitches=3 | TotalSpend=189460.86
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹326718 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=326718.41
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 71 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹366208 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=366207.61
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 53 | Severity: FRAUD_ALERT
+Reason: Total spend ₹295563 exceeds ₹2,00,000
+HighValue=3 | CityChanges=1 | DeviceSwitches=4 | TotalSpend=295563.40
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹231640 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=231639.80
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC101 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹280751 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=280751.23
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC202 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹261366 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=261366.13
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 62 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹315061 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=2 | TotalSpend=315060.91
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC606 | Score: 51 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹272039 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=272039.06
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹312943 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=312942.54
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹214078 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=214077.59
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹345616 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=345616.23
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹340854 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=340854.18
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 82 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹381783 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=381782.98
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC505 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹226547 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=226547.42
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC202 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹276875 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=276875.27
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC202 | Score: 82 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹352615 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=352615.31
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹274874 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=274874.33
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=175505.96
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 67 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹268724 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=268723.65
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹225615 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=225614.99
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC404 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹238056 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=5 | TotalSpend=238055.87
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC010 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹246224 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=246223.92
+
+=== 2026-03-07 12:58:01 ===
+Account: ACC707 | Score: 58 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹256425 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=256425.04
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹264896 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=264895.83
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 51 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=1 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=186160.53
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 80 | Severity: FRAUD_ALERT
+Reason: 5 cities within 5 minutes; Total spend ₹271866 exceeds ₹2,00,000
+HighValue=2 | CityChanges=5 | DeviceSwitches=5 | TotalSpend=271865.90
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=197839.20
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 58 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹250840 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=250840.29
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹242637 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=242637.06
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC404 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=152773.40
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=166795.15
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=158027.48
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹248911 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=248911.27
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹210544 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=210543.86
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹263895 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=263894.50
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹265190 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=265189.83
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹229570 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=5 | TotalSpend=229570.01
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 54 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); Total spend ₹291283 exceeds ₹2,00,000
+HighValue=4 | CityChanges=1 | DeviceSwitches=3 | TotalSpend=291283.01
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹321348 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=2 | TotalSpend=321348.38
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹227359 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=227359.10
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹290932 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=290931.93
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC101 | Score: 51 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹207476 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=2 | TotalSpend=207475.51
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹297632 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=297632.25
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹214494 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=214493.76
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 82 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹380990 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=380990.00
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 79 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹332237 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=332237.26
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 61 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹247263 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=5 | TotalSpend=247262.65
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 67 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹350543 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=350543.34
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹226789 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=226788.84
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹255578 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=255578.17
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹239227 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=239227.23
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹284906 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=284906.37
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹248252 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=248251.86
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 77 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹311346 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=311346.26
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 70 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹295350 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=3 | TotalSpend=295350.19
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹248120 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=248120.42
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 61 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹235086 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=2 | TotalSpend=235085.98
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 71 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹284538 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=284538.27
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 82 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹381976 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=381976.01
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 70 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹301491 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=301491.14
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹225486 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=225486.48
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC909 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=184164.34
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC909 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹210469 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=210469.27
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹252572 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=2 | TotalSpend=252571.99
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC909 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹219134 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=219133.93
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹279440 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=279440.22
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=170808.13
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC505 | Score: 76 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹307088 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=307088.25
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC404 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹222535 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=222534.90
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹280752 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=280751.91
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹261904 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=261904.21
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC404 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹226122 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=226121.78
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC404 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹274470 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=274469.76
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC303 | Score: 53 | Severity: FRAUD_ALERT
+Reason: Total spend ₹286953 exceeds ₹2,00,000
+HighValue=3 | CityChanges=1 | DeviceSwitches=4 | TotalSpend=286952.51
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 62 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹246434 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=246433.62
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC101 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹221210 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=221209.78
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 58 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=1 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=196722.70
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC909 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=184046.82
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC808 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹324329 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=324329.00
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC707 | Score: 54 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹240590 exceeds ₹2,00,000
+HighValue=1 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=240590.20
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹258822 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=258822.49
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC101 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=175366.02
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC101 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹216702 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=216701.95
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹213612 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=213611.64
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 75 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹307478 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=307477.62
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC010 | Score: 90 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹421345 exceeds ₹2,00,000
+HighValue=5 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=421344.56
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹232237 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=232236.81
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC909 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹295057 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=295057.42
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹278790 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=278790.19
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹235615 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=235615.38
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC202 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹287048 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=287047.97
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 65 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹250837 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=250836.79
+
+=== 2026-03-07 12:58:02 ===
+Account: ACC606 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹220580 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=220579.82
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹215818 exceeds ₹2,00,000
+HighValue=2 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=215817.83
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹235189 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=235188.85
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=157185.63
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC606 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=1 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=135106.94
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC606 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=190248.83
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=180172.26
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC606 | Score: 77 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; 6 different devices; Total spend ₹255479 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=6 | TotalSpend=255479.03
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹233702 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=233701.69
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹210784 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=210783.54
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 86 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 4 cities within 5 minutes; Total spend ₹326236 exceeds ₹2,00,000
+HighValue=4 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=326235.79
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC808 | Score: 59 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹241573 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=241573.00
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=177775.45
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹256802 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=256802.01
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 58 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹242392 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=242392.35
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹234769 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=234768.56
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹213409 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=213409.22
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹251477 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=251477.30
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC909 | Score: 51 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=1 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=165564.57
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹211076 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=211076.08
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=194395.23
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹272826 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=272825.78
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 61 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹288785 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=288785.27
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 57 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹231863 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=231863.02
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹236012 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=236012.28
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 68 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹246659 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=246658.70
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 87 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹365909 exceeds ₹2,00,000
+HighValue=5 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=365908.93
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 94 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 4 cities within 5 minutes; Total spend ₹393403 exceeds ₹2,00,000
+HighValue=5 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=393402.84
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC505 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=178861.01
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 90 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹423374 exceeds ₹2,00,000
+HighValue=5 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=423374.23
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC505 | Score: 89 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 4 cities within 5 minutes; Total spend ₹372351 exceeds ₹2,00,000
+HighValue=4 | CityChanges=4 | DeviceSwitches=5 | TotalSpend=372351.03
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=194186.45
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=177423.37
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC707 | Score: 67 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹264310 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=264309.67
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC505 | Score: 58 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); Total spend ₹253371 exceeds ₹2,00,000
+HighValue=4 | CityChanges=1 | DeviceSwitches=4 | TotalSpend=253371.16
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC101 | Score: 55 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹204297 exceeds ₹2,00,000
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=204297.31
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC909 | Score: 64 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹239086 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=239085.67
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 53 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹240847 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=240846.60
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC010 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹350297 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=350297.48
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 63 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹279069 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=279069.08
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹276520 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=276519.61
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹270437 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=270437.46
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 70 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹311880 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=311879.91
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC606 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=168477.54
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 85 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 3 cities within 5 minutes; Total spend ₹410965 exceeds ₹2,00,000
+HighValue=4 | CityChanges=3 | DeviceSwitches=5 | TotalSpend=410965.12
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 79 | Severity: FRAUD_ALERT
+Reason: 5 high-value transactions (>₹50k); 2 cities within 5 minutes; Total spend ₹442882 exceeds ₹2,00,000
+HighValue=5 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=442882.39
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 82 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; 6 different devices; Total spend ₹287564 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=6 | TotalSpend=287563.77
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC202 | Score: 96 | Severity: FRAUD_ALERT
+Reason: 5 cities within 5 minutes; 7 different devices; Total spend ₹340512 exceeds ₹2,00,000
+HighValue=3 | CityChanges=5 | DeviceSwitches=7 | TotalSpend=340511.78
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC808 | Score: 52 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes
+HighValue=2 | CityChanges=3 | DeviceSwitches=3 | TotalSpend=192722.47
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 56 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹251176 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=3 | TotalSpend=251176.20
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC404 | Score: 60 | Severity: FRAUD_ALERT
+Reason: 2 cities within 5 minutes; Total spend ₹277041 exceeds ₹2,00,000
+HighValue=3 | CityChanges=2 | DeviceSwitches=4 | TotalSpend=277040.99
+
+=== 2026-03-07 12:58:03 ===
+Account: ACC303 | Score: 67 | Severity: FRAUD_ALERT
+Reason: 3 cities within 5 minutes; Total spend ₹273575 exceeds ₹2,00,000
+HighValue=3 | CityChanges=3 | DeviceSwitches=4 | TotalSpend=273575.34
+
+=== 2026-03-07 12:58:04 ===
+Account: ACC404 | Score: 66 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹201220 exceeds ₹2,00,000
+HighValue=2 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=201219.95
+
+=== 2026-03-07 12:58:04 ===
+Account: ACC606 | Score: 74 | Severity: FRAUD_ALERT
+Reason: 4 cities within 5 minutes; Total spend ₹288307 exceeds ₹2,00,000
+HighValue=3 | CityChanges=4 | DeviceSwitches=4 | TotalSpend=288307.30
+
+=== 2026-03-07 12:58:04 ===
+Account: ACC303 | Score: 76 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; 6 different devices; Total spend ₹326156 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=6 | TotalSpend=326155.69
+
+=== 2026-03-07 12:58:04 ===
+Account: ACC303 | Score: 79 | Severity: FRAUD_ALERT
+Reason: 4 high-value transactions (>₹50k); 2 cities within 5 minutes; 6 different devices; Total spend ₹361338 exceeds ₹2,00,000
+HighValue=4 | CityChanges=2 | DeviceSwitches=6 | TotalSpend=361338.28
+
